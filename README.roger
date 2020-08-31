@@ -1,0 +1,28 @@
+Clone My Fork
+~~~~~~~~~~~~~
+git clone https://github.com/RogerHall/barrier
+
+Catch Up with Upstream changes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+https://gist.github.com/CristinaSolana/1885435
+* git remote add upstream https://github.com/debauchee/barrier
+* git fetch upstream
+* git checkout master
+* git merge upstream/master
+
+Building
+~~~~~~~~
+Follow instructions in the link
+    https://github.com/debauchee/barrier/wiki/Building-on-Windows
+        set B_QT_MSVC=msvc2017_64
+            I think this is for Visual Studio 2017
+        set B_QT_MSVC=msvc2019_64
+            This worked for me
+Create a VS project file and many other components.
+    clean_build.bat
+Launch visual studio 2019
+    E:\git\github\RogerHall\barrier\build\barrier.sln
+    Builds now.
+Save progress
+    git status
+    git add README.roger clean_build.bat
