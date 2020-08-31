@@ -111,6 +111,7 @@ Screen::enter(KeyModifierMask toggleMask)
 {
     assert(m_entered == false);
     LOG((CLOG_INFO "entering screen"));
+    system("\"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Dell Display Manager\\Dell Display Manager.lnk\" 2:SetActiveInput mdp");
 
     // now on screen
     m_entered = true;
@@ -129,6 +130,7 @@ Screen::leave()
 {
     assert(m_entered == true);
     LOG((CLOG_INFO "leaving screen"));
+    system("\"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Dell Display Manager\\Dell Display Manager.lnk\" 2:SetActiveInput hdmi");
 
     if (!m_screen->leave()) {
         return false;
